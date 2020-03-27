@@ -1,0 +1,28 @@
+{
+  "name": "use-sitecat",
+  "version": "0.0.0",
+  "description": "A React hook for using SiteCatalyst from Adobe Analytics.",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "babel src -d build",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlee-dev/use-sitecat.git"
+  },
+  "keywords": [],
+  "author": "Alex Lee <www.alexlee.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexlee-dev/use-sitecat/issues"
+  },
+  "homepage": "https://github.com/alexlee-dev/use-sitecat#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0"
+  }
+}
