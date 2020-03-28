@@ -1,6 +1,6 @@
 {
   "name": "use-sitecat",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A React hook for using SiteCatalyst from Adobe Analytics.",
   "files": [
     "build"
