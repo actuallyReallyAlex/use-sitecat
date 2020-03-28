@@ -20,8 +20,26 @@ const useSiteCat = () => {
     Object.keys(values).forEach((key) => {
       // eslint-disable-next-line no-console
       console.log(`TRACKING - Setting ${key} to ${values[key]}`);
-      window.s[key] = values[key];
+      siteCatContext[key] = values[key];
     });
+
+    // * Determine if event is a PageLoad or a LinkTrack
+    // * LinkTrack by default
+    let trackingFunc = siteCatContext.tl;
+
+    // * If pageName has changed, this is a PageLoad
+    if (
+      siteCatContext.pageName &&
+      values.pageName &&
+      siteCatContext.pageName !== values.pageName
+    ) {
+      trackingFunc = siteCatContext.t;
+    }
+
+    // * Call trackingFunc to send data to SiteCat
+    // eslint-disable-next-line no-console
+    console.log('TRACKING - Calling SiteCat');
+    trackingFunc();
   };
 
   return [siteCatContext, trackEvent];
