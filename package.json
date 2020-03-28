@@ -5,8 +5,9 @@
   "files": [
     "build"
   ],
+  "main": "build/index.js",
   "scripts": {
-    "build": "babel src -d build",
+    "build": "rimraf build && babel src -d build",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -23,6 +24,8 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0"
-  }
+    "@babel/preset-env": "^7.9.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {}
 }
